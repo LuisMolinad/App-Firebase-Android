@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">RedSocialFireBase</string>
+    <string name="LoginBTN">LOGIN</string>
+    <string name="RegistrarBTN">Registrarme</string>
+    <string name="CerrarSesion">Cerrar Sesión</string>
+
+    <!--Registro-->
+    <string name="RegistroTXT">Registro</string>
+    <string name="Correo"> Escriba su correo</string>
+    <string name="Password">Escriba su contraseña</string>
+    <string name="Nombres">Nombres Completos </string>
+    <string name="Apellidos"> Apellidos Completos</string>
+    <string name="Edad">Edad</string>
+    <string name="Telefono">Telefono</string>
+    <string name="Direccion">Direccion</string>
+    <string name="REGISTRARUSUARIO">REGISTRARME</string>
+
+    <!--Login-->
+    <string name="CorreoLogin">Correo Electrónico</string>
+    <string name="PasswordLogin">Contraseña</string>
+    <string name="INGRESAR">LOGIN</string>
+
+    <!--DIALOG DE INICIO DE SESION-->
+    <string name="Noinicio">No se puede iniciar sesión, intente nuevamente, revise su correo y contraseña</string>
+    <string name="ok_no_inicia">Entendido</string>
+
+
+</resources>

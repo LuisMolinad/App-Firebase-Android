@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "177904848416",
+    "project_id": "red-social-firebase-b7c01",
+    "storage_bucket": "red-social-firebase-b7c01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177904848416:android:038c89ced3d4baa8253645",
+        "android_client_info": {
+          "package_name": "com.example.redsocialfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177904848416-agjsjuldhkrp0a4v5hv8a144fqvv9e68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.redsocialfirebase",
+            "certificate_hash": "df2ab020cd2539d5dfbb52f8a1b2d4695bfbb366"
+          }
+        },
+        {
+          "client_id": "177904848416-gkk1qh3i4fd0fkh8l3e572d7impge9v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXqHVTOQT960RR7HODfhFAbTMV9KDt5UI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177904848416-gkk1qh3i4fd0fkh8l3e572d7impge9v9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
