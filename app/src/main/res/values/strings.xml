@@ -19,10 +19,14 @@
     <string name="CorreoLogin">Correo Electrónico</string>
     <string name="PasswordLogin">Contraseña</string>
     <string name="INGRESAR">LOGIN</string>
+    <string name="INGRESARCONGOOGLE">INGRESAR CON GOOGLE</string>
 
     <!--DIALOG DE INICIO DE SESION-->
     <string name="Noinicio">No se puede iniciar sesión, intente nuevamente, revise su correo y contraseña</string>
     <string name="ok_no_inicia">Entendido</string>
+
+    <!--STRING NECESARIO PARA QUE FUNCIONES -->
+
 
 
 </resources>

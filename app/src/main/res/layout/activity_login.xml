@@ -80,6 +80,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!--INICIO DE SESION CON GOOGLE-->
+        <Button
+            android:id="@+id/INGRESARCONGOOGLE"
+            android:text="@string/INGRESARCONGOOGLE"
+            android:background="#ffffff"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:drawablePadding="15dp"
+            android:drawableLeft="@drawable/common_google_signin_btn_icon_dark"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

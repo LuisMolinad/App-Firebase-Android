@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -28,6 +29,7 @@ public class Registro extends AppCompatActivity {
     Button REGISTRARUSUARIO;
 
     FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -55,6 +57,8 @@ public class Registro extends AppCompatActivity {
         //instancia FIREBASE
         firebaseAuth=FirebaseAuth.getInstance();
 
+        progressDialog = new ProgressDialog(Registro.this);//Inicializamos el progressdialog
+
         REGISTRARUSUARIO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,12 +82,17 @@ public class Registro extends AppCompatActivity {
     }
 //METODO PARA REGISTRAR UN USUARIO
     private void REGISTRAR(String correo, String pass) {
+        progressDialog.setTitle("Registrando");
+        progressDialog.setMessage("Espere por favor...");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
         firebaseAuth.createUserWithEmailAndPassword(correo, pass)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //si el registro es exitoso
                         if (task.isSuccessful()){
+                            progressDialog.dismiss();//progress se cierra
                             FirebaseUser user = firebaseAuth.getCurrentUser();
                             //Datos que deseamos registrar
                             //Tomar en cuenta que los string deben diferir de los EditText "correo" es distinto de "Correo"
@@ -126,12 +135,14 @@ public class Registro extends AppCompatActivity {
                             //Una vez se ha registrado nos envia al apartado de inicio
                             startActivity(new Intent(Registro.this, Inicio.class));
                         }else {
+                            progressDialog.dismiss();//progress se cierra
                             Toast.makeText(Registro.this, "Algo ha salido mal", Toast.LENGTH_LONG).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();//progress se cierra ojito cuidao
                 Toast.makeText(Registro.this,e.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
